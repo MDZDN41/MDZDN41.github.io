@@ -1,100 +1,92 @@
-*
-{
-    margin: 0;
-    padding: 0;
+body {
+	overflow-x: hidden; /*--right gutter fix--*/
+    font-family: sans-serif;
+    color: #505952;
+    font-weight: bold;
 }
-
-header
-{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(wallpaper.jpg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+.navbar{
+    text-transform: uppercase;
+    background-color: #505962;
 }
-
-.main-nav
-{
-    float: right;
-    list-style: none;
-    margin-top: 50px;
+#menu a{
+    padding-right: 50px;
 }
-
-.main-nav li
-{
-    display: inline-block;
+.navbar-brand img{
+    height: 2rem;
 }
-
-.main-nav li a
-{
-    color: white;
-    text-decoration: none;
-    padding: 5px 30px;
-    font-family: "Roboto", sans-serif;
-    font-size: 15px;
+.home-wrap{
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(img/4.jpeg) no-repeat center center fixed;
 }
-
-.main-nav li.active a
-{
-    border: 1px solid white;
-}
-
-.main-nav li a:hover
-{
-    background-color: darkred;
-}
-
-.logo img
-{
-    width: 130px;
-    height: auto;
-    float: left;
-    margin-left: 50px;
-    margin-top: 20px;
-}
-
-body
-{
-    font-family: monospace;
-}
-.row
-{
-    max-width: 1800px;
-    margin: auto;
-}
-.container
-{
-    float: right;
-}
-
-
-#myCarousel
-{
-    float: right;
-    margin-right: 0px;
-    width: 166%;
-    margin-top: 50px;
-}
-.admin
-{
+.caption{
+    width: 100%;
+    max-width: 100%;
     position: absolute;
-    width: 90%;
-    margin-left: 0;
-    margin-right: 0;
+    top: 40%;
+    z-index: 1;    
 }
-.admin h5
-{
+.caption h3{
     color: white;
-    margin-top: 760px;
-    margin-left: 700px;
-    font-family: monospace;
-    font-size: 15px;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
 }
-.admin a
-{
+.btn{
+    border-width: medium;
+    border-radius: 0;
+    text-transform: uppercase;
+    padding: .5rem 1.1rem;
+    font-size: .9rem;
+    font-weight: bold;
+}
+h3.heading{
+    text-align: center;
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    margin-bottom: 1.9rem;
+}
+.footer .row{
+    background-color: #505962;
+    color: white;
+    font-family:serif,
+  
+}
+.footer img{
+    width: 150px;
+    padding-top: 20px;
+    margin-bottom: 20px;
     color: white;
     text-decoration: none;
-    font-family: "Roboto", sans-serif;
-    
+    font-size: 20px;
+}
+.footer a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px
+}
+
+#tal a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+#il a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+#ssi a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+#sir a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.jumbotron{
+    margin-bottom: 0;
+    background: url(img/comming.jpg) center center;
 }
 
 
@@ -103,3 +95,34 @@ body
 
 
 
+
+/*--- iOS Landing Page Fix --*/
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: table;
+  background: #E9ECEF;
+  z-index: -1;
+}
+.home-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.home-inner {
+  position: fixed;
+  display: table;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
